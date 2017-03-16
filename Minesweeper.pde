@@ -61,11 +61,13 @@ public void displayLosingMessage()
 {
     //your code here
     fill(0);
-    text("you lose", 100, 100);
+    text("you lose", 100, 200);
 }
 public void displayWinningMessage()
 {
     //your code here
+    fill(0);
+    text("you win", 100, 300);
 
 }
 
@@ -154,6 +156,7 @@ public class MSButton
                 count++;
             }
         }
+        text("Bombs marked: " + count, 100, 100);
         if(count == NUM_BOMBS)
         {
             displayWinningMessage();
@@ -164,6 +167,11 @@ public class MSButton
         {
             displayLosingMessage();
             fill(255,0,0);
+            for(int i = 0; i < NUM_BOMBS; i++)
+            {
+                bombs.get(i);
+                fill(255, 0, 0);
+            }
         }
         else if(clicked)
             fill( 200 );
@@ -247,3 +255,4 @@ public class MSButton
 
 
 
+//JACKY MINESWEEPER
